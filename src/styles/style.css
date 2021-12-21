@@ -16,7 +16,8 @@
 }
 
 body {
-  width: 1110px;
+  width: 1440px;
+  margin: 0;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.6em;
@@ -24,11 +25,13 @@ body {
 }
 
 h1, h2, h3 {
+  font-weight: normal;
   font-family: "Neucha", sans-serif;
   line-height: 1.2em;
 }
 
 h1 {
+  margin: 0;
   font-size: 72px;
 }
 
@@ -40,6 +43,72 @@ h3 {
   font-style: 34px;
 }
 
-section {
+main, footer {
   padding: 100px 0;
+  width: 1110px;
+}
+
+header::before {
+  content: url("../imgs/background.png");
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 1440px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 10%;
+}
+
+header {
+  position: absolute;
+  margin: 0;
+  padding: 100px 165px;
+  max-width: 1440px;
+  background: var(--light);
+}
+
+.orangetext {
+  position: absolute;
+  color: var(--main);
+  z-index: 2;
+}
+
+.blacktext {
+  color: #000;
+}
+
+header img {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -45px;
+  right: -300px;
+  height: 525px;
+}
+
+header p {
+  column-count: 2;
+  column-gap: 30px;
+  margin-top: -70px;
+}
+
+header .button {
+  display: block;
+  width: 148px;
+  height: 49px;
+  position: relative;
+  left: 570px;
+  top: 40px;
+  padding: 12px 24px;
+  
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: var(--white);
+  
+  border: none;
+  background: var(--main);
+
+  cursor: pointer;
 }
