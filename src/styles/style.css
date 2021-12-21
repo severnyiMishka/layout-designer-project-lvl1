@@ -23,6 +23,10 @@ body {
   color: #2a2626;
 }
 
+a {
+  color: #000;
+}
+
 h1, h2, h3 {
   font-weight: normal;
   font-family: "Neucha", sans-serif;
@@ -154,6 +158,20 @@ header .button {
   padding: 200px 165px 100px 165px;
 }
 
+.nav-container {
+  max-width: 1110px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.navigation a {
+  display: block;
+  text-decoration: none;
+  color: none;
+}
+
 .navigation-card {
   width: 350px;
   height: 323px;
@@ -172,6 +190,9 @@ header .button {
 }
 
 .navigation-title {
+  display: inline-block;
+  width: 350px;
+  height: 323px;
   padding: 0;
   font-size: 52px;
   font-weight: 400;
@@ -184,8 +205,27 @@ header .button {
   font-weight: normal;
   font-size: 64px;
   text-align: left;
+  line-height: 1;
 }
 
 .card-title {
   margin: 40px 0 0 0;
+}
+
+.navigation-card:hover {
+  background: var(--main);
+  color: var(--white);
+}
+
+.navigation-card-2:hover {
+  background: var(--main);
+  color: var(--white);
+}
+
+.navigation-card:hover h3 {
+  color: var(--white);
+}
+
+.navigation-card-2:hover h3 {
+  color: var(--white);
 }
