@@ -16,7 +16,6 @@
 }
 
 body {
-  width: 1440px;
   margin: 0;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -36,16 +35,21 @@ h1 {
 }
 
 h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
   font-size: 60px;
 }
 
 h3 {
-  font-style: 34px;
+  font-size: 34px;
 }
 
-main, footer {
-  padding: 100px 0;
-  width: 1110px;
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 165px;
 }
 
 header::before {
@@ -53,43 +57,61 @@ header::before {
   position: absolute;
   top: 0;
   right: 0;
-  max-width: 1440px;
+  margin: 0;
+  max-height: 900px;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 10%;
 }
 
 header {
-  position: absolute;
-  margin: 0;
   padding: 100px 165px;
-  max-width: 1440px;
   background: var(--light);
+  height: 950px;
 }
 
-.orangetext {
-  position: absolute;
-  color: var(--main);
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1110px;
+}
+
+.header-title {
   z-index: 2;
+}
+
+/* Text colors start */
+
+.orangetext {
+  color: var(--main);
 }
 
 .blacktext {
   color: #000;
 }
 
-header img {
+.whitetext {
+  color: var(--white);
+}
+
+/* Text colors end */
+
+.header-image {
+  position: absolute;
+  top: 55px;
+  left: 461px;
   margin: 0;
   padding: 0;
-  position: relative;
-  top: -45px;
-  right: -300px;
   height: 525px;
+  z-index: 1;
 }
 
 header p {
   column-count: 2;
   column-gap: 30px;
-  margin-top: -70px;
+  margin-top: 195px;
 }
 
 header .button {
@@ -98,7 +120,7 @@ header .button {
   height: 49px;
   position: relative;
   left: 570px;
-  top: 40px;
+  top: 20px;
   padding: 12px 24px;
   
   font-weight: 700;
@@ -111,4 +133,59 @@ header .button {
   background: var(--main);
 
   cursor: pointer;
+}
+
+.video {
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
+}
+
+.video-title {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: var(--maindark);
+  margin-top: -200px;
+  padding: 200px 165px 100px 165px;
+}
+
+.navigation-card {
+  width: 350px;
+  height: 323px;
+  padding: 24px;
+  background: var(--light);
+  text-align: left;
+}
+
+.navigation-card-2 {
+  width: 350px;
+  height: 348px;
+  margin-top: 20px;
+  padding: 24px;
+  background: var(--light);
+  text-align: left;
+}
+
+.navigation-title {
+  padding: 0;
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 62px;
+  text-align: left;
+  background: none;
+}
+
+.card-number {
+  font-weight: normal;
+  font-size: 64px;
+  text-align: left;
+}
+
+.card-title {
+  margin: 40px 0 0 0;
 }
